@@ -1,0 +1,22 @@
+var tab = ["Audrey", "Aurélien", "Flavien", "Jérémy", "Laurent", "Melik", "Nouara", "Salem", "Samuel", "Stéphane"];
+var i = 0;                                        // Déclaration des diverses variables dont le tableau (récupéré dans l'énoncé)
+                                   
+
+var prenom = prompt("entrez un prénom");         // récupération de la valeur du prénom
+
+for(i=0;i<tab.length;i++)                       // boucle pour lire le tableau, i va de 0 a la taille totale du tableau (ici on aurait pu mettre 10..)
+  {
+     if(prenom === tab[i])                // si il y'a "match" entre le prénom entré et une case d'indice i
+      {
+      
+      tab.splice(i, 1);              // retire le contenu de la case "matchée" d'indice i sur une seule (1) case.
+      
+      tab[tab.length] = "' '";   // cette ligne sert a ajouter l'éspace a la fin du tableau, je précise qu'on aurait pu utiliser tab.push("''"")     
+      }   
+    
+    
+    
+    
+    
+   console.log("["+tab[i]+"]");   // comme demandé, on prend soin a afficher le contenu sous forme de tableau, j'éspère que cette méthode est la bonne.. 
+  }
